@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { connect } from "react-redux";
-import { Route, NavLink, withRouter, Redirect, Switch } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 import SignUpForm from "./components/forms/signUp";
 import UploadImage from "./components/forms/UploadImage";
 import Images from "./components/images/images";

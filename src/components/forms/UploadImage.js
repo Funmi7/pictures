@@ -45,6 +45,7 @@ const UploadImage = ({ errors, dispatch, props }) => {
       setErrorMessage("");
       dispatch(addImage(image));
       setIsSubmitted(true);
+      window.location = '/';
     }
   };
 

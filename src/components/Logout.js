@@ -26,10 +26,11 @@ const Logout = (props) => {
   const onLogout = () => {
     localStorage.clear();
     props.history.replace("/login");
+    window.location.reload();
   };
 
   const onCancel = () => {
-    props.history.push("/");
+    props.history.push("/"); 
   };
 
   return (

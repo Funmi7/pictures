@@ -4,6 +4,7 @@ import { withRouter } from "react-router-dom";
 import { startLoadImages } from "../../state/actions/imagesActions";
 import Image from "./image";
 import styled from "styled-components";
+import Loader from "react-loader-spinner";
 
 const ImagesStyled = styled.div`
   display: flex;
@@ -32,7 +33,7 @@ const Images = ({ errors, images, dispatch }) => {
         <p className="errorMsg centered-message">{errors.get_error}</p>
       )}
       {isLoading ? (
-        <div className="loading-msg centered-message">Loading...</div>
+        <Loader type="TailSpin" color="#2BAD60" height={80} width={80} />
       ) : (
         images.map((image) => <Image key={image._id} id={image._id} />)
       )}
